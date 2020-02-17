@@ -1,7 +1,10 @@
 .header {
+    box-sizing: border-box;
+    border-bottom: 6px solid #323746;;
     background-color: #2D303A;
-    color: #FFFFFF;
-    height: 90px;
+    color: #ffffff;
+    height: 95px;
+    box-shadow: 0 0 0 6px #323746;
 }
 
 .wrapper {
@@ -10,19 +13,31 @@
 }
 
  .header__inner {
-    height: 90px;
+     position: relative;
+    height: 95px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-right: 40px;
+    padding-left: 40px;
 } 
+
+.logo::after {
+    content: "*";
+    position: absolute;
+    left: 150px;
+    top: 30px;
+    color: #f06c64;
+}
 
 .logo {
     width: 115px;
     text-transform: uppercase;
     font-family: 'Lato-Bold';
-    font-size: 18px;
+    font-size: 25px;
     margin: 0px;
     text-align: center;
+    cursor: pointer;
 }
 
 .menu {
@@ -36,6 +51,27 @@
     text-decoration: none;
     text-transform: uppercase;
     font-family: 'Lato-Bold';
-    font-size: 9px;
+    font-size: 12px;
     color: #FFFFFF;
+    transition: ease 0.2s;
+    position: relative;
+}
+
+.menu__link::before {
+    content: "";
+    display: block;
+    position: absolute;
+    color: white;
+    border: 1px solid #494e62;
+    top: 5px;
+    left: -15px;
+}
+
+.menu__link:hover {
+    color: #f06c64;
+}
+
+.main {
+    height: 600px;
+    background-color: #f06c64;
 }
