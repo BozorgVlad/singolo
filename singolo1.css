@@ -26,16 +26,16 @@
     content: "*";
     position: absolute;
     left: 150px;
-    top: 30px;
+    top: 29px;
     color: #f06c64;
 }
 
 .logo {
     width: 115px;
     text-transform: uppercase;
-    font-family: 'Lato-Bold';
+    font-family: 'Lato-Regular';
     font-size: 25px;
-    margin: 0px;
+    margin-bottom: 8px;
     text-align: center;
     cursor: pointer;
 }
@@ -43,6 +43,7 @@
 .menu {
     width: 371px;
     margin-left: 455px;
+    margin-top: 4px;
     display: flex;
     justify-content: space-between;
 }
@@ -50,7 +51,7 @@
 .menu__link {
     text-decoration: none;
     text-transform: uppercase;
-    font-family: 'Lato-Bold';
+    font-family: 'Lato-Regular';
     font-size: 12px;
     color: #FFFFFF;
     transition: ease 0.2s;
@@ -74,4 +75,20 @@
 .main {
     height: 600px;
     background-color: #f06c64;
+    box-sizing: border-box;
+    border-bottom: 6px solid #ea676b;
+}
+
+.main__slider {
+    padding-top: 53px;
+    margin: 0 auto;
+}
+
+.iphone_vertical {
+    margin-right: 70px;
+    margin-left: 112px;
+}
+
+.iphone_horizontal {
+    margin-bottom: 122px;
 }
