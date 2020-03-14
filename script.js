@@ -152,11 +152,11 @@ const AddFormHandlers = () => {
         
         if (subject.value) {
             let themeText = document.querySelector('.theme-submit');
-            themeText.innerText = subject.value.toString();
+            themeText.innerText = 'Тема: ' + subject.value.toString();
         };
         if (descr.value) {
             let descrText = document.querySelector('.descr-submit');
-            descrText.innerText = descr.value.toString();
+            descrText.innerText = 'Описание: ' + descr.value.toString();
         };
         
     });
