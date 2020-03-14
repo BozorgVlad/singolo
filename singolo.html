@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Singolo</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="normilize.css">
@@ -18,12 +18,12 @@
             <div class="wrapper">
                 <div class="header__inner">
                     <h1 class="logo">Singolo</h1>
-                    <nav class="menu">
+                    <nav  id ="menu" class="menu">
                         <a href="#" class="menu__link menu__link--active">Home</a>
-                        <a href="#" class="menu__link">Services</a>
-                        <a href="#" class="menu__link">Portfolio</a>
-                        <a href="#" class="menu__link">About</a>
-                        <a href="#" class="menu__link">Contact</a>
+                        <a href="#services" class="menu__link">Services</a>
+                        <a href="#portfolio" class="menu__link">Portfolio</a>
+                        <a href="#about" class="menu__link">About</a>
+                        <a href="#contacts" class="menu__link">Contact</a>
                     </nav>
                 </div>
             </div>
@@ -33,9 +33,12 @@
                    <div class="main__slider">
                         <div class="iphone_vertical"><img src="assets/images/iPhone_Vertical.png" alt="vertical iphone"></div>
                         <div class="iphone_horizontal"><img src="assets/images/iPhone_Horizontal.png" alt="horizontal iphone"></div>
+                        <div class="slide-2 hidden"><img src="assets/images/Slide-2.png" alt="slide-2"></div>
+                        <div class="slide-left slide"></div>
+                        <div class="slide-right slide"></div>
                 </div>
                 </section>
-                <section class="main__services">
+                <section id="services" class="main__services">
                     <div class="wrapper">
                     <h2 class="services__header">Our Services</h2>
                     <p class="services__info">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus,
@@ -105,7 +108,7 @@
                      </div>
                     </div>
                 </section>
-                <section class="main_portfolio">
+                <section id="portfolio" class="main_portfolio">
                     <div class="wrapper">
                         <h2 class="portfolio_header">Portfolio</h2>
                         <p class="portfolio_info">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, 
@@ -117,22 +120,22 @@
                             <button class="portfolio__tab">Artwork</button>
                         </div>
                         <div class="portfolio_block-images">
-                            <div class="block-image"><img src="assets/images/Portfolio1.png" alt="portfolio"></div>
-                            <div class="block-image"><img src="assets/images/Project2.png" alt="portfolio"></div>
-                            <div class="block-image"><img src="assets/images/Project3.png" alt="portfolio"></div>
-                            <div class="block-image"><img src="assets/images/Project4.png" alt="portfolio"></div>
-                            <div class="block-image"><img src="assets/images/Project5.png" alt="portfolio"></div>
-                            <div class="block-image"><img src="assets/images/Project6.png" alt="portfolio"></div>
-                            <div class="block-image"><img src="assets/images/Project7.png" alt="portfolio"></div>
-                            <div class="block-image"><img src="assets/images/Project8.png" alt="portfolio"></div>
-                            <div class="block-image"><img src="assets/images/Project9.png" alt="portfolio"></div>
-                            <div class="block-image"><img src="assets/images/Project10.png" alt="portfolio"></div>
-                            <div class="block-image"><img src="assets/images/Project11.png" alt="portfolio"></div>
-                            <div class="block-image"><img src="assets/images/Project12.png" alt="portfolio"></div>
+                            <div><img class ='block-image' src="assets/images/Portfolio1.png" alt="portfolio"></div>
+                            <div><img class ='block-image' src="assets/images/Project2.png" alt="portfolio"></div>
+                            <div><img class ='block-image' src="assets/images/Project3.png" alt="portfolio"></div>
+                            <div><img class ='block-image' src="assets/images/Project4.png" alt="portfolio"></div>
+                            <div><img class ='block-image' src="assets/images/Project5.png" alt="portfolio"></div>
+                            <div><img class ='block-image' src="assets/images/Project6.png" alt="portfolio"></div>
+                            <div><img class ='block-image' src="assets/images/Project7.png" alt="portfolio"></div>
+                            <div><img class ='block-image' src="assets/images/Project8.png" alt="portfolio"></div>
+                            <div><img class ='block-image' src="assets/images/Project9.png" alt="portfolio"></div>
+                            <div><img class ='block-image' src="assets/images/Project10.png" alt="portfolio"></div>
+                            <div><img class ='block-image' src="assets/images/Project11.png" alt="portfolio"></div>
+                            <div><img class ='block-image' src="assets/images/Project12.png" alt="portfolio"></div>
                         </div>
                     </div>
                 </section>
-                <section class="about-us">
+                <section id="about" class="about-us">
                     <div class="wrapper">
                         <h2 class="about-us__header">About Us</h2>
                         <p class="about-us__info">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
@@ -177,7 +180,7 @@
                         </div>
                     </div>
                 </section>
-                <section class="contacts">
+                <section id="contacts" class="contacts">
                     <div class="wrapper">
                         <h2 class="contacts__header">Get a Quote</h2>
                         <p class="contacts__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, 
@@ -185,12 +188,12 @@
                         <div class="wrapper-form">
                             <form action="#" class="form">
                                 <fieldset>
-                                    <input class="input" type="name" placeholder="Name (Required)" required>
-                                    <input class="input" type="email" placeholder="Email (Required)" required>
-                                    <input class="input" type="text" placeholder="Subject">
+                                    <input class="input input-name" type="name" placeholder="Name (Required)" required>
+                                    <input class="input input-email" type="email" placeholder="Email (Required)" required>
+                                    <input class="input input-subject" type="text" placeholder="Subject">
                                     <textarea class="input input-description" placeholder="Describe your project in detail..."></textarea>
                                 </fieldset>
-                                <button class="button-submit">Submit</button>
+                                <button id='buttuon-submit' class="button-submit">Submit</button>
                             </form>
                             <div class="contact-block">
                                 <h3 class="contact-block__header">Contact Information</h3>
@@ -220,5 +223,7 @@
                 </div>
             </div.>
         </footer>
+
+    <script src="script.js"></script>    
     </body>
 </html>
