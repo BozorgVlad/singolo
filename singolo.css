@@ -119,7 +119,6 @@
     border-radius: 2px;
     background-color: black;
     transition: ease 0.4s;
-    user-select: none;
 }
 
 .black_vertical {
@@ -168,6 +167,10 @@
 .iphone_horizontal {
     margin-top: 121px;
     transition: ease 0.2s;
+    height: 216px;
+    width: 458px;
+    user-select: none;
+    cursor: pointer;
 }
 
 .slide-right {
