@@ -63,23 +63,26 @@ const slider = () => {
 };
 //Phone//
 const addPhoneHandlers = () => {
-    document.querySelector('.iphone_vertical').addEventListener('click', () => { 
+    document.querySelector('.home-1').addEventListener('click', (e) => { 
         let verticalScreen = document.querySelector('.black_vertical');
-        if (verticalScreen) {
+        if (e.target.tagName = 'IMG') {
+            if (verticalScreen) {
             removeBlackScreen('black_vertical');
-        } else {
+            } else {
             renderBlackScreen('black_vertical');
+            };
         };
-        addBlackScreenHandler();
     });
-    document.querySelector('.iphone_horizontal').addEventListener('click', () => {
+    
+    document.querySelector('.home-2').addEventListener('click', (e) => {
         let horizontalScreen = document.querySelector('.black_horizontal');
-        if (horizontalScreen) {
+        if (e.target.tagName = 'IMG') {
+            if (horizontalScreen) {
             removeBlackScreen('black_horizontal');
-        } else {
+            } else {
             renderBlackScreen('black_horizontal');
+            };
         };
-        addBlackScreenHandler();
     });
 };
 
@@ -93,19 +96,6 @@ const renderBlackScreen = (screen) => {
 const removeBlackScreen = (screen) => {
     document.querySelector(`.${screen}`).remove();
 };
-
-const addBlackScreenHandler = () => {
-    if (document.querySelector('.black_horizontal')) {
-        document.querySelector('.black_horizontal').addEventListener('click', () => {
-            removeBlackScreen('black_horizontal');
-        });
-    };
-    if (document.querySelector('.black_vertical')) {
-        document.querySelector('.black_vertical').addEventListener('click', () => {
-            removeBlackScreen('black_vertical');
-        });
-    }
-}
 //Portfolio
 const addPortfolioHandlers = () => {
     document.querySelector('.portfolio_tabs').addEventListener('click', (e) => {
