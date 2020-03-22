@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="normilize.css">
         <link rel="stylesheet" href="fonts.css">
-        <link rel="stylesheet" href="singolo.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <header class="header">
@@ -19,7 +19,7 @@
                 <div class="header__inner">
                     <h1 class="logo">Singolo</h1>
                     <nav  id ="menu" class="menu">
-                        <a href="#" class="menu__link menu__link--active">Home</a>
+                        <a href="#home" class="menu__link menu__link--active">Home</a>
                         <a href="#services" class="menu__link">Services</a>
                         <a href="#portfolio" class="menu__link">Portfolio</a>
                         <a href="#about" class="menu__link">About</a>
@@ -29,16 +29,18 @@
             </div>
         </header>
         <main class="main">
-            <section class="wrapper_slider">
+            <section  id='home' class="wrapper_slider">
                    <div class="main__slider">
-                        <div class="iphone_vertical"><img src="assets/images/iPhone_Vertical.png" alt="vertical iphone">
-                         <img class='home home-1' src="assets/images/Home.png" alt = 'home'></div>
-                        <div class="iphone_horizontal"><img src="assets/images/iPhone_Horizontal.png" alt="horizontal iphone">
-                         <img class='home home-2' src="assets/images/Home.png" alt = 'home'></div>
-                        <div class="slide-2 hidden"><img src="assets/images/Slide-2.png" alt="slide-2"></div>
+                        <div class ="item s-active">
+                            <div class="iphone_vertical"><img src="assets/images/iPhone_Vertical.png" alt="vertical iphone">
+                             <img class='home home-1' src="assets/images/Home.png" alt = 'home'></div>
+                            <div class="iphone_horizontal"><img src="assets/images/iPhone_Horizontal.png" alt="horizontal iphone">
+                             <img class='home home-2' src="assets/images/Home.png" alt = 'home'></div>
+                        </div>
+                        <div class="slide-2 item hidden"><img src="assets/images/Slide-2.png" alt="slide-2"></div>
+                    <div>
                         <div class="slide-left slide"></div>
                         <div class="slide-right slide"></div>
-                </div>
                 </section>
                 <section id="services" class="main__services">
                     <div class="wrapper">
@@ -210,7 +212,7 @@
                         </div>
                     </div>
                 </section>
-            </div>
+            </<div>
         </main>
         <footer class="footer">
             <div class="wrapper">

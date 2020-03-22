@@ -2,14 +2,28 @@ window.onload = function() {
     //Header//
     addMenuHandlers();
     //Slider//
-    addSliderHandlers();
+    addSliderHandler();
     //PHONE//
     addPhoneHandlers();
     //Portfolio//
     addPortfolioHandlers();
     //Form
     AddFormHandlers();
+
+
 };
+
+    window.onscroll = function() {myFunction()}
+    
+    function myFunction() {
+        let header = document.querySelector(".header");
+        if (window.pageYOffset >=  1) {
+            header.classList.add('sticky'); 
+        } else {
+            header.classList.remove('sticky');
+        }
+    };
+
 //Header//
 const addMenuHandlers = () => {
     document.querySelector('#menu').addEventListener('click', (e) => {
@@ -18,8 +32,26 @@ const addMenuHandlers = () => {
             let linkClass = 'menu__link';
             removeActiveLinks(linkClass);
             selectLink(activeLink, linkClass);
-        }
-    })
+        };
+    });
+    document.addEventListener('scroll', () => {
+        let curPos = window.scrollY;
+        let blocks = document.querySelectorAll('#home, #services, #portfolio, #about, #contacts');
+        let linkClass = document.querySelectorAll('.menu__link');
+
+        blocks.forEach((el) => {
+            if ((el.offsetTop - 100) <= curPos && (el.offsetTop + el.offsetHeight) > curPos) {
+                linkClass.forEach((a) => {
+                    a.classList.remove(`menu__link--active`);
+                    if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
+                        a.classList.add(`menu__link--active`);
+                    };
+                });  
+            };
+        });
+    });
+   
+
 };
 
 const removeActiveLinks = (linkClass) => {
@@ -34,33 +66,67 @@ const selectLink = (link, linkClass) => {
     link.classList.add(`${linkClass}--active`);
 };
 //Slider//
-const addSliderHandlers = () => {
-    document.querySelector('.main__slider').addEventListener('click', (e) => {
-        if (e.target.classList.contains('slide')) {
-            slider();
-        };
-    });
+const addSliderHandler = () => {
+    let items = document.querySelectorAll('.item');
+    let currentItem = 0;
+    let isEnabled = true;
+
+function changeCurrentItem(n) {
+  currentItem = (n + items.length) % items.length;
 };
 
-const slider = () => {
-    let slider = document.querySelector('.wrapper_slider');
-    let secondSlide = document.querySelector('.slide-2');
+function hideItem(direction) {
+  isEnabled = false;
+  items[currentItem].classList.add(direction);
+  items[currentItem].addEventListener('animationend', function () {
+    this.classList.remove('s-active', direction);
+  })
+}
 
-    if (secondSlide.classList.contains('hidden')) {
-        secondSlide.classList.remove('hidden');
-        slider.style.backgroundColor = '#648BF0';
-        if (document.querySelector('.black_horizontal')) {
-            removeBlackScreen('black_horizontal');
-        };  
-        if (document.querySelector('.black_vertical')) {
-            removeBlackScreen('black_vertical');
-        };
-         
-    } else {
-        secondSlide.classList.add('hidden');
-        slider.style.backgroundColor = '#f06c64';
-    };
+function showItem(direction) {
+  isEnabled = false;
+  items[currentItem].classList.add('next', direction);
+  if (currentItem==1) {
+    document.querySelector('.wrapper_slider').classList.add('blue');
+  }
+  else {
+    document.querySelector('.wrapper_slider').classList.remove('blue');
+  }
+  items[currentItem].addEventListener('animationend', function () {
+   
+    this.classList.remove('next', direction);
+    this.classList.add('s-active');
+    isEnabled = true;
+    
+  })
+}
+
+function previousItem(n) {
+  hideItem('to-right');
+  changeCurrentItem(n - 1);
+  showItem('from-left');
+}
+
+function nextItem(n) {
+  hideItem('to-left');
+  changeCurrentItem(n + 1);
+  showItem('from-right');
+}
+
+document.querySelector('.slide-left').addEventListener('click', function() {
+  if (isEnabled) {
+    previousItem(currentItem);
+  }
+});
+
+document.querySelector('.slide-right').addEventListener('click', function() {
+  if (isEnabled) {
+    nextItem(currentItem);
+  }
+});
+
 };
+
 //Phone//
 const addPhoneHandlers = () => {
     document.querySelector('.home-1').addEventListener('click', (e) => { 
@@ -69,7 +135,7 @@ const addPhoneHandlers = () => {
             if (verticalScreen) {
             removeBlackScreen('black_vertical');
             } else {
-            renderBlackScreen('black_vertical');
+            renderBlackScreen('black_vertical', 'iphone_vertical');
             };
         };
     });
@@ -80,16 +146,16 @@ const addPhoneHandlers = () => {
             if (horizontalScreen) {
             removeBlackScreen('black_horizontal');
             } else {
-            renderBlackScreen('black_horizontal');
+            renderBlackScreen('black_horizontal', 'iphone_horizontal');
             };
         };
     });
 };
 
-const renderBlackScreen = (screen) => {
+const renderBlackScreen = (screen, divClass) => {
     let div = document.createElement('div');
-    let slider = document.querySelector('.main__slider');
-    slider.append(div);
+    let phone = document.querySelector(`.${divClass}`);
+    phone.append(div);
     div.className = `${screen} screen`;
 };
 
