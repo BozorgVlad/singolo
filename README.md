@@ -1,3 +1,3 @@
 # singolo
 
-Site : https://bozorgvlad.github.io/singolo/singolo.html
+Site : https://bozorgvlad.github.io/singolo/index.html
