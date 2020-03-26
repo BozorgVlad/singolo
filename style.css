@@ -23,7 +23,6 @@
     background-color: #2D303A;
     color: #ffffff;
     height: 95px;
-    box-shadow: 0 0 0 6px #323746;
 }
 
 .wrapper {
@@ -60,8 +59,7 @@
 .logo::after {
     content: "*";
     position: absolute;
-    left: 150px;
-    top: 29px;
+    left: 110px;
     color: #f06c64;
 }
 
@@ -73,6 +71,7 @@
     margin-bottom: 8px;
     text-align: center;
     cursor: pointer;
+    position: relative;
 }
 
 .menu {
@@ -117,6 +116,7 @@
 }
 
 .wrapper_slider {
+    position: relative;
     height: 600px;
     background-color: #f06c64;
     transition: ease 0.5s;
@@ -128,9 +128,6 @@
     padding-top: 53px;
     max-width: 1020px;
     margin: 0 auto;
-    display: flex;
-    padding-left: 11.7%;
-    justify-content: space-between;
 }
 
 .item {
@@ -138,6 +135,12 @@
     position: relative;
     animation: 0.5s ease-in-out;
     width: 100%;
+}
+
+.item-phones {
+    width: 796px;
+    padding-left: 100px;
+    margin: 0 auto;
 }
 
 .iphone_vertical {
@@ -156,7 +159,7 @@
 }
 
 .home-2 {
-    right: 409px;
+    right: 407px;
     position: absolute;
     top: 85px;
     transition: ease .1s;
@@ -202,6 +205,12 @@
     transition: ease-out 0.2s;
 }
 
+.slide {
+    display: flex;
+    justify-content: space-between;
+    top: 48%;
+}
+
 .slide-left {
     background-image: url('assets/images/slide_left.png');
     width: 16px;
@@ -209,8 +218,9 @@
     cursor: pointer;
     transition: ease 0.2s;
     position: absolute;
-    top: 280px;
-    left: 155px;
+    top: 45%;
+    left: 5%;
+    right: auto;
 }
 
 .slide-right:hover {
@@ -229,8 +239,7 @@
     width: 458px;
     user-select: none;
     position: relative;
-    margin-left: 74px;
-    margin-right: 248px;
+    margin-left: 75px;
 }
 
 .slide-right {
@@ -239,8 +248,9 @@
     height: 27px;
     cursor: pointer;
     position: absolute;
-    top: 280px;
-    right: 152px;
+    top: 45%;
+    right: 5%;
+    left: auto
 }
 
 .main__services {
@@ -721,15 +731,528 @@ fieldset {
     background-color: #648BF0;
     border-bottom: 5px solid #3C5AA6;
     transition: 0.1s;
-  }
+}
 
-  .s-active, .next {
+.s-active, .next {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
-  .next {
+.next {
     position: absolute;
     width: 100%;
-  }
+}
+
+.photo {
+    max-width: 300px;
+    width: 33%%;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 1019px) {
+    .slide-2 img {
+        max-height: 456px;
+    }
+
+    .photo {
+        max-width: 218.94px;
+    }
+
+    .wrapper {
+        width: 728px;
+
+    }
+
+    .header .wrapper {
+        max-width: 728px;
+        margin: 0 auto;
+        padding-left: 0px;
+    }
+    
+    .menu {
+        margin-left: 0px;
+    }
+
+    .item-phones {
+        width: 599.48px;
+        height: 363.74px;
+        padding-left: 85px;
+        padding-right: 85px;
+        margin: 0 auto;
+    }
+
+    .iphone_horizontal {
+        margin-left: 54.42px;
+    }
+
+    .phone_hor {
+        width: 364.21px;
+        height: 180.93px;
+    }
+
+    .phone_vert {
+        height: 364.21px;
+        width: 180.93px;
+    }
+
+    .home {
+        width: 31.48px;
+        height: 31.48px;
+    }
+
+    .home-1 {
+        bottom: 31px;
+        left: 65px;
+    }
+
+    .home-2 {
+        right: 326px;
+        top: 65px;
+    }
+
+    .black_horizontal {
+        width: 251px;
+        height: 143px;
+        top: 10px;
+        right: 68px;
+    }
+
+    .black_vertical {
+        height: 251px;
+        width: 143px;
+        top: 49px;
+        left: 10px;
+    }
+
+    .wrapper_slider {
+        height: 451.76px;
+    }
+
+    .main__slider {
+        max-width: 768px;
+    }
+
+    .main__services {
+        height: 674.24px;
+        padding-top: 39.24px;
+    }
+
+    .services__info {
+        width: 687px;
+    }
+
+    .services__blocks-wrapper {
+        width: 687px;
+        justify-content: space-between;
+    }
+
+    .main_portfolio {
+        height: 1102px;
+    }
+
+    .portfolio_block-images {
+        width: 768px;
+        height: 794px;
+    }
+
+    .portfolio_info {
+        width: 648px;
+    }
+
+    .block-image {
+        width: 216.19px;
+        height: 183.76px;
+    }
+
+    .about-us {
+        height: 689px;
+        padding-top: 37px;
+    }
+
+    .person-item {
+        width: 219px;
+        height: 360px;
+    }
+
+    .about-us__info {
+        width: 688px;
+    }
+
+    .contacts {
+        height: 631px;
+    }
+
+    .wrapper-form {
+        margin-top: 20px;
+    }
+
+    .contacts__text {
+        width: 689px;
+    }
+
+    .contact-block {
+        width: 221px;
+    }
+
+    .input {
+        width: 442px;
+    }
+
+    .input-description {
+        height: 159px;
+    }
+}
+
+.menu-btn-wrap {
+    display: none;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.menu-button {
+    display: none;
+    width: 25px;
+    height: 20px;
+    background-color: #2D303A;
+    cursor: pointer;
+    position: relative;
+    transition: .3s;
+}
+
+@media (max-width: 767px) {
+    .wrapper {
+        width: 100%;
+        max-width: 343px;
+        padding-left: 32px;
+    }
+
+    .header {
+        height: 71px;
+    }
+
+    .menu__link {
+        font-size: 24px;
+        line-height: 29px;
+        margin-bottom: 27px;
+    }
+
+    .logo {
+        font-size: 19.6875px;
+        line-height: 24px;
+        margin-bottom: 0px;
+    }
+
+    .burger {
+        margin-top: 24px;
+        margin-right: 40px
+    }
+
+    .logo::after {
+        left: 98px;
+    }
+
+    .header .wrapper {
+        max-width: 375px;
+        margin: 0 auto;
+        padding-left: 0px;
+    }
+
+    .header__inner {
+        justify-content: center;
+        height: 71px;
+    }
+
+    .header--active {
+        z-index: 1000;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        width: 278px;
+        height: 100%;
+        background: #2D303A;
+        box-shadow: 0px -40px 20px rgba(0, 0, 0, 0.4);
+        padding: 0px;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    #menu {
+        display: none;
+        flex-direction: column;
+        width: 205px;
+        margin-left: 71px;
+        margin-top: 184px;
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    .menu-btn-wrap {
+        display: block;
+        top: 24px;
+    }
+
+    .menu-button {
+        display: block;
+        width: 25px;
+        height: 20px;
+        background-color: #2D303A;
+        cursor: pointer;
+        position: relative;
+        transition: .3s;
+    }
+
+    .menu-button__active {
+        transform: rotate(90deg);
+    }
+
+    .menu-button span {
+        position: absolute;
+        top: 50%; margin-top: -1px;
+        left: 50%; margin-left: -10px;
+        width: 20px;
+        height: 2.4px;
+        background: #FFFFFF;
+    }
+
+    .menu-button span::before,
+    .menu-button span::after {
+        content: '';
+        display: block;
+        transition: .5s;
+        background: #FFFFFF;
+        width: 20px;
+        height: 2.4px;
+    }
+
+    .menu-button span::before {
+        transform: translateY(-7px);
+    }
+    .menu-button span::after {
+        transform: translateY(5px);
+        height: 2.1px;
+    }
+
+    .menu__link::before {
+        display: none;
+    }
+
+    .phone_vert {
+        width: 88.3px;
+        height: 177.61px;
+    }
+
+    .phone_hor {
+        width: 177.61px;
+        height: 88.3px;
+    }
+
+    .home {
+        width: 15.37px;
+        height: 15.37px;
+    }
+
+    .home-2  {   
+        right: 160px;
+        top: 32px;
+    }
+
+    .home-1 {
+        bottom: 16px;
+        left: 31px;
+    }
+
+    .slide-left {
+        left: 2%;
+    }
+
+    .slide-right {
+        right: 2%;
+    }
+
+    .black_vertical {
+        height: 124px;
+        width: 70px;
+        top: 24px;
+        left: 5px;
+    }
+
+    .black_horizontal {
+        width: 124px;
+        height: 70px;
+        top: 5px;
+        left: 22px;
+    }
+
+    .wrapper_slider {
+        height: 220.6px;
+    }
+
+    .item-phones {
+        width: 375.5px;
+        height: 220.6px;
+        margin: 0 auto;
+        padding: 0px;
+    }
+
+    .main__slider {
+        padding-top: 0px;
+    }
+
+    .iphone_horizontal {
+        margin-left: 26.57px;
+        height: 88.35px;
+        width: 177.84px;
+    }
+
+    .main__services {
+        height: 1032px;
+        padding-top: 27px;
+    }
+
+    .services__info {
+        width: 300px;
+        height: 214px;
+        margin-top: 20px;
+        text-align: left;
+    }
+
+    .services__blocks-wrapper {
+        width: 320px;
+        margin-top: 25px;
+    }
+
+    .services-block {
+        margin-bottom: 20px;
+        height: 104px;
+    }
+
+    .main_portfolio {
+        height: 844px;
+    }
+
+    .portfolio_header {
+        margin-top: 0px;
+    }
+
+    .portfolio_info {
+        width: 307px;
+        text-align: left;
+    }
+
+    .portfolio_block-images {
+        width: 342px;
+        margin: 0px;
+        height: 590px;
+    }
+
+    .block-image {
+        width: 151px;
+        height: 128px;
+    }
+
+    .about-us {
+        height: 1754px;
+        padding-top: 40px;
+
+    }
+
+    .about-us__header {
+        margin-top: 0px;
+    }
+
+    .about-us__info {
+        width: 295px;
+        text-align: left;
+    }
+
+    .about-us__person-items {
+        width: 315px;
+        flex-direction: column;
+        margin-top: 17px;
+    }
+
+    .photo {
+        width: 314px;
+        height: 314px;
+    }
+
+    .photo img {
+        width: 314px;
+        height: 314px;
+    }
+
+    .person-item {
+        width: 314px;
+        height: 440px;
+        margin-bottom: 34px;
+    }
+
+    .person-logos {
+        margin-top: 9px;
+    }
+
+    .contacts {
+        height: 969px;
+    }
+
+    .contacts__text {
+        width: 305px;
+        text-align: left;
+    }
+
+    .wrapper-form {
+        flex-direction: column;
+    }
+
+    .input {
+        width: 302px;
+    }
+
+    .button-submit {
+        width: 100%;
+    }
+
+    .contact-block {
+        width: 313px;
+    }
+
+    .contact-block__info {
+        width: 100%;
+    }
+
+    .contact-block__header {
+        margin-top: 31px;
+        margin-bottom: 5px;
+    }
+
+    .contact-block__links {
+        margin-top: 10px;
+    }
+
+    .form {
+        width: 315px;
+    }
+
+    .footer__info {
+        display: none;
+    }
+
+    .footer__inner {
+        justify-content: center;
+        padding-right: 32px;
+    }
+
+    .footer__logos {
+        padding: 0px;
+    }
+
+    .slide-2 img {
+        max-height: 223px;
+    }
+}
