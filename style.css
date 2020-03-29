@@ -755,6 +755,18 @@ fieldset {
 }
 
 @media (max-width: 1019px) {
+    .person-logos {
+        margin-top: 10px;
+    }
+
+    .name {
+        width: 219px;
+    }
+
+    .slide-2 img {
+        width: 754px;
+    }
+
     .message {
         top: 10%;
         left: 30%;
@@ -766,11 +778,6 @@ fieldset {
 
     .photo {
         max-width: 218.94px;
-    }
-
-    .wrapper {
-        width: 728px;
-
     }
 
     .header .wrapper {
@@ -786,8 +793,8 @@ fieldset {
     .item-phones {
         width: 599.48px;
         height: 363.74px;
-        padding-left: 85px;
-        padding-right: 85px;
+        padding-left: 77px;
+        padding-right: 78px;
         margin: 0 auto;
     }
 
@@ -861,7 +868,7 @@ fieldset {
     }
 
     .portfolio_block-images {
-        width: 768px;
+        width: 715px;
         height: 794px;
     }
 
@@ -881,7 +888,7 @@ fieldset {
 
     .person-item {
         width: 219px;
-        height: 360px;
+        height: 370px;
     }
 
     .about-us__info {
