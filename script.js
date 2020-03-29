@@ -29,24 +29,29 @@ const addMediaHandler = () => {
     const header = document.querySelector('.header__inner');
     const menu = document.querySelector('#menu');
     const logo = document.querySelector('.logo');
+    const link = document.querySelector(".menu__link");
 
     menuBtn.addEventListener('click', e => {
-
-        //e.preventDefault();
+        e.preventDefault();
         if (e.target.tagName = 'A' && menuBtn.classList.contains('menu-button__active')) {
             header.classList.remove('header--active');
             menuBtn.classList.remove('menu-button__active');
             menu.style.display = 'none';
             logo.classList.remove('burger');
         } else {
-
             menuBtn.classList.add('menu-button__active');
             header.classList.add('header--active');
             menu.style.display = 'flex';
             logo.classList.add('burger');
+        }        
+    });
+    header.addEventListener("click", e => {
+        if (e.target.classList.contains("menu__link") && document.body.clientWidth < 768) {
+            header.classList.remove('header--active');
+            menuBtn.classList.remove('menu-button__active');
+            menu.style.display = 'none';
+            logo.classList.remove('burger');
         }
-        
-        
     })
 }
 
@@ -211,7 +216,22 @@ const addPortfolioHandlers = () => {
 
 const shuffleCards = () => {
     let cards = document.querySelectorAll('.portfolio_block-images div');
-    cards.forEach(card => { card.style.order = `${Math.floor(Math.random() * Math.floor(12))}`});
+    let childArr = [];
+    let container = document.querySelector(".portfolio_block-images");
+    container.innerHTML = " ";
+
+    cards.forEach(el => {
+        childArr.push(el);
+    });
+
+    childArr.sort(() => {
+        return Math.random() - 0.5;
+    });
+
+    childArr.forEach(el => {
+        container.append(el);
+    });
+    
 }
 //Form
 const AddFormHandlers = () => {

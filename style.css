@@ -755,6 +755,11 @@ fieldset {
 }
 
 @media (max-width: 1019px) {
+    .message {
+        top: 10%;
+        left: 30%;
+    }
+
     .slide-2 img {
         max-height: 456px;
     }
@@ -926,6 +931,10 @@ fieldset {
 }
 
 @media (max-width: 767px) {
+    .message {
+        left: 14%;
+    }
+
     .wrapper {
         width: 100%;
         max-width: 343px;
@@ -987,7 +996,7 @@ fieldset {
         flex-direction: column;
         width: 205px;
         margin-left: 71px;
-        margin-top: 184px;
+        margin-top: 80px;
         font-size: 24px;
         line-height: 29px;
     }
@@ -1254,5 +1263,86 @@ fieldset {
 
     .slide-2 img {
         max-height: 223px;
+    }
+}
+
+@media (max-width: 374px) {
+    .wrapper {
+        max-width: 310px;
+        padding-left: 10px;
+    }
+
+    .item-phones {
+        width: 290px;
+    }
+
+    .iphone_horizontal {
+        margin-left: 5px;
+    }
+
+    .slide-left {
+        left: 1%
+    }
+
+    .slide-right {
+        right: 1%;
+    }
+
+    .slide-2 img{
+        max-width: 100%;
+    }
+
+    .portfolio_block-images {
+        width: 310px;
+    }
+
+    .block-image {
+        width: 135px;
+    }
+
+    .photo {
+        max-width: 300px; 
+    }
+
+    .photo img {
+        width: 100%;
+    }
+
+    .about-us__person-items {
+        max-width: 300px;
+    }
+
+    .person-item {
+        width: 300px;
+        margin-right: 0px;
+    }
+
+    .form {
+        width: 300px;
+    }
+
+    .input {
+        width: 285px;
+    }
+
+    .contact-block {
+        width: 300px;
+    }
+
+    #menu {
+        margin-top: 25px;
+    }
+
+    .message {
+        left: 9%;
+    }
+
+    .services__blocks-wrapper {
+        margin: 0px;
+        width: 310px;
+    }
+
+    .block-wrapper {
+        margin-right: 0px;
     }
 }
